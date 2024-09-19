@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 2.5</title>
+    <style>
+        div {
+            color: white;
+        }
+        #static {
+            background-color: blueviolet;
+            position: static;
+            height: 100px;
+            width: 150px;
+        }
+        #relative1 {
+            background-color: darkred;
+            position: relative;
+            height: 100px;
+            width: 150px;
+        }
+        #relative2 {
+            background-color: peru;
+            position: relative;
+            height: 100px;
+            width: 150px;
+            left: 30px;
+            top: -30px;
+        }
+        #big_relative {
+            background-color: indianred;
+            position: relative;
+            height: 320px;
+            width: 600px;
+            z-index: 10;
+        }
+        #absolute {
+            background-color: indigo;
+            position: absolute;
+            height: 150px;
+            width: 300px;
+            right: 0;
+            top: 100px;
+        }
+        #fixed {
+            background-color: forestgreen;
+            position: fixed;
+            height: 110px;
+            width: 100px;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="static">It's a static div!</div>
+    <div id="relative1">It's a relative div!</div>
+    <div id="relative2">It's s relative div!</div>
+    <div id="big_relative">
+        It's a relative div!
+        <div id="absolute">It's an absolute div with relative parent!</div>
+    </div>
+    <div id="fixed">It's a fixed div!</div>
+</body>
+</html>
