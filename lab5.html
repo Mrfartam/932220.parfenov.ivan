@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Frontend Task №6</title>
+    <style>
+        body {
+            justify-content: center;
+            display:flex;
+            margin: 0;
+        }
+
+        .main {
+            font-size: 14px;
+            width: 50%;
+            position: relative;
+            top: 0;
+        }
+
+        .block {
+            background-color: #b6f5f5;
+            border-bottom: 2px solid black;
+            border-left: 1px solid #cbcbcb;
+            border-right: 1px solid #cbcbcb;
+            justify-content:center;
+            padding-left: 20px;
+            padding-top: 1px;
+        }
+
+        .block:hover {
+            background-color: #ff5555;
+        }
+
+        .button_div {
+            display: flex;
+            margin: 0 auto 0;
+        }
+
+        .button {
+            background-image: linear-gradient(top, #00f100, #008900);
+            background-image: -o-linear-gradient(top, #00f100, #008900);
+            background-image: -moz-linear-gradient(top, #00f100, #008900);
+            background-image: -webkit-linear-gradient(top, #00f100, #008900);
+            color: white;
+            text-align: center;
+            width: 25%;
+            margin: 10px auto 15px;
+            padding: 2px;
+            border: none;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            line-height: 25%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #new_block {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #e1ff73;
+            width: 30%;
+            padding: 10px;
+            z-index: 20;
+        }
+
+        #new_block h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top:0;
+        }
+
+        #new_block p {
+            text-align: left;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="block">
+            <h2 class="title">Новость 1</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            <div class="button_div">
+                <button class="button">Открыть всплывающее окно</button>
+            </div>
+        </div>
+        <div class="block">
+            <h2 class="title">Новость 2</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            <div class="button_div">
+                <button class="button">Открыть всплывающее окно</button>
+            </div>
+        </div>
+        <div class="block">
+            <h2 class="title">Новость 3</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            <div class="button_div">
+                <button class="button">Открыть всплывающее окно</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="new_block" class="hidden">
+        <h1 id="new_title"></h1>
+        <p id="new_main_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugiat id, eligendi ratione veritatis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+        </p>
+    </div>
+
+    <div id="overlay" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
