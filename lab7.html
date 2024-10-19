@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Frontend Task №7</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 0.9;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+            .square:hover {
+                background-color: yellow;
+            }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 86.5px solid blue;
+            opacity: 0.9;
+            position: absolute;
+        }
+
+            .triangle:hover {
+                border-bottom-color: yellow;
+            }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            opacity: 0.9;
+            border-radius: 50%;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+            .circle:hover {
+                background-color: yellow;
+            }
+
+        button:active {
+            border-color: deepskyblue;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="num" name="num" placeholder="Количество фигур">
+        <br />
+    </form>
+    <button onclick="CreateSquare()">Квадрат</button>
+    <button onclick="CreateTriangle()">Треугольник</button>
+    <button onclick="CreateCircle()">Круг</button>
+    <br />
+    <div id="container"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
